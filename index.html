@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Personal Website</title>
+    <script src="https://kit.fontawesome.com/ab1fc16588.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Add a heading.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#portfolio">Work</a></li>
+                    
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi, I'm <span>Medhansh</span><br> Patel  From India </h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="https://www.updatepedia.com/wp-content/uploads/2018/03/about-me-leon-severan-we-buy-houses.jpg" >
+                </div>
+                <div class="about-col-2">
+                 
+                    <h1 class="sub-title">
+                        About Me
+                    </h1>
+                    <p>  - Hi,this is Medhansh currently in first year junior college in feild of commerce. <br> - I am very passionate ,diligent and flawless.But,my one weakness is that i am a slothful person. <br> - I like to play sports and some mobile games. <br> - Neither do i like listening to songs nor dancing.I am a big movie buff and love to watch suspense and thriller movies. <br> - I have a lots off intrest in following subjects: Technology, Hindu Mythology and space science. </p>
+  
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        
+                     </div>
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI Design</span><br>I can design and build websites</li>
+                            <li><span>Languages</span><br>Hands on Html,css,javascript and python </li>
+                            <li><span>Athletic's</span><br>My affection to sports is at next level</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>School</span><br>Passed out 10th from Vidya Vikasini School (I.C.S.E)</li>
+                            <li><span>10th result</span><br>Scored 90.2% in my 10th boards</li>
+                            <li><span>Favourite Subject</span><br>No, Maths was not My Favourite.I liked History and Geography the most</li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hobbies">
+        <div class="container">
+            <h1 class="sub-title">
+                        My Hobbies & Interets
+                    </h1>
+                    <div class="hobbies-list">
+                        <div>
+                         
+                            <h2>
+                                What i do in my free time
+                            </h2>
+                            <p>I am not a big music lover,so in my free time i listen to podcasts and audiobooks (my fav: 'Atomic Habits' and 'Rich dad Poor dad)</p>
+                            </div>
+                            <div>
+            
+                                <h2>Sports and Games </h2>
+                                <p>I am obsessed with cricket.And my current favourite player is SuryaKumar Yadav. <br>My favourite mobile game is Bgmi and on pc game is GTA 5</p>
+                                
+                            </div>
+                        <div>
+                           
+                            <h2>
+                               My Goals 
+                            </h2>
+                            <p>My goal is to be a software engineer and work for Google</p>
+   
+                        </div>
+                    </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">
+              My Work
+            </h1>
+            <div class="work-list">    
+                <div class="work">
+                    <img src="images/work-1.png" >
+                    <div class="layer">
+                        <h3>Time Managment Blog</h3>
+                        <p>In this blog i have talked about ways to manage your time and advantages of doing so.</p>
+                        <a href="https://medtalk.super.site/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" >
+                    <div class="layer">
+                        <h3> Psychology of Money Blog</h3>
+                        <p> Timeless lesseons on Wealth,Greed,and Happiness.</p>
+                        <a href="https://sites.google.com/view/medtalk/home?authuser=1" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="op-p">
+        <h3>Thank You</h3>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+    <script>
+
+     var sidemenu = document.getElementById("sidemenu");
+
+     function openmenu(){
+        sidemenu.style.right = "0";
+     }
+     function closemenu(){
+        sidemenu.style.right = "-200px";
+     }
+
+    </script>
+</body>
+</html>
